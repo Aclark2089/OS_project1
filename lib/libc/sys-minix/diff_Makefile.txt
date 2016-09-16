@@ -1,0 +1,3 @@
+23a24,25
+> SRCS+= start_plog.c stop_plog.c reset_plog.c get_plog_size.c get_plog_byPID.c get_plog_byindex.c 
+> 

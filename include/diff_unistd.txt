@@ -1,0 +1,9 @@
+439a440,447
+> /* LOGSYSPS */
+> void start_plog(void);
+> void stop_plog(void);
+> void reset_plog(void);
+> int get_plog_size(void);
+> int get_plog_byPID(int, long *, long *);
+> int get_plog_byindex(int, long *, long *);
+> 
