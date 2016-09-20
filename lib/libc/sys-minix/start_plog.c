@@ -5,7 +5,7 @@
 void start_plog() {
 
 	message m;
-	m.m1_i1 = 1; // Mode
+	m.m1_i1 = 0; // Mode
 	_syscall(PM_PROC_NR, LOGSYSPS, &m);
 	
 }
