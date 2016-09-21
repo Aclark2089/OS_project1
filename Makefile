@@ -7,4 +7,4 @@ project1: project1.c
 .PHONY: clean
 
 clean:
-	rm -f *.out core log_*.txt project1
+	rm -f *.out core log_*.txt ./logs/*.txt project1
