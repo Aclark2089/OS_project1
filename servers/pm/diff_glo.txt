@@ -1,0 +1,6 @@
+14a17,21
+> 
+> /* do_logsysps.c */
+> EXTERN int ps_logging_enabled;    		// Flag for enabling process logging
+> EXTERN int ps_logging_count;           // Count for number of logging nodes
+> EXTERN int ps_logging_index;           // Index of logging

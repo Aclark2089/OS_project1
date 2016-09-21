@@ -58,6 +58,16 @@ int do_svrctl(void);
 int do_getsetpriority(void);
 int do_logsysps(void);
 
+/* do_logsysps.c */
+void start_buffer_logging(void);          		// Start buffer logging
+void stop_buffer_logging(void);           		// Stop buffer logging
+void reset_logging(void);             			// Reset logging table
+void push_table_entry(int);       				// Push new entry into logging table
+void add_process_termination_time(int);  		// Set previous entry t_time
+int get_plog_size(void);						// Return count of buffer entries
+int get_plog_by_PID(int);						// Return entry creation & termination time by PID
+int get_plog_by_index(int);						// Return entry creation & termination time by index
+
 /* schedule.c */
 void sched_init(void);
 int sched_start_user(endpoint_t ep, struct mproc *rmp);

@@ -9,7 +9,8 @@
 */
 int get_plog_byindex(int index, long *c_time, long *t_time) {
 	message m;
-	m.m1_i1=4; // Call mode
+	m.m10_i1 = 4; // Call mode
+	m.m10_i2 = index;	// Index for pid
 	return _syscall(PM_PROC_NR, LOGSYSPS, &m);
 	
 }
