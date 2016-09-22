@@ -26,6 +26,6 @@ int get_plog_byPID(int pid, long *c_time, long *t_time) {
 		*c_time = m.m10_l1;
 		*t_time = m.m10_l2;
 
-	return 1;
+	return 0;
 	
 }

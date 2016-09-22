@@ -13,5 +13,5 @@ int get_plog_size() {
 		return m.m10_i1;			// Return size
 	}
 
-	return 2;
+	return 0;
 }

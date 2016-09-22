@@ -128,12 +128,13 @@ int get_plog_size() {
 int get_plog_by_PID(int pid) {
 	
 	int i = 0;
-	while (i++ < ps_logging_count) {	
+	while (i < TABLE_CAPACITY) {	
 		if(psbuffer[i].pid == pid) {
 			mp->mp_reply.m10_l1 = psbuffer[i].c_time;	// Set c_time in reply
 			mp->mp_reply.m10_l2 = psbuffer[i].t_time;	// Set t_time in reply
 			return 1;
 		}
+		i++;
 	}
 
 	// PID not found in buffer, failure
