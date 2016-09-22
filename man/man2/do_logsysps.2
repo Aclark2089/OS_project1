@@ -1,0 +1,115 @@
+.TH LOGSYSPS 2 "September 21, 2016"
+.UC 4
+.SH NAME
+start_plog
+.SH SYNOPSIS
+.nf
+.ft B
+void start_plog()
+.fi
+.SH DESCRIPTION
+.de SP
+.if t .sp 0.4
+.if n .sp
+..
+.B start_plog
+turns on recording to track processes and add them to my_buffer with their respective pid and c_time.
+.RS
+.SP
+.SH "RETURN VALUE"
+This call never returns.
+.UC 4
+.SH NAME
+stop_plog
+.SH SYNOPSIS
+.nf
+.ft B
+void stop_plog()
+.fi
+.SH DESCRIPTION
+.de SP
+.if t .sp 0.4
+.if n .sp
+..
+.B stop_plog
+Disables recording for process log buffer
+.RS
+.SP
+.SH "RETURN VALUE"
+This call never returns.
+.UC 4
+.SH NAME
+reset_plog
+.SH SYNOPSIS
+.nf
+.ft B
+void reset_plog()
+.fi
+.SH DESCRIPTION
+.de SP
+.if t .sp 0.4
+.if n .sp
+..
+.B reset_plog
+Resets all entries in logging table. Does not stop recording of new logs.
+.RS
+.SP
+.SH "RETURN VALUE"
+This call never returns.
+.UC 4
+.SH NAME
+get_plog_byindex
+.SH SYNOPSIS
+.nf
+.ft B
+int get_plog_byindex(int index, long *c_time, long *t_time)
+.fi
+.SH DESCRIPTION
+.de SP
+.if t .sp 0.4
+.if n .sp
+..
+.B get_plog_byindex
+Returns process log entry creation & termination times by given index. 
+.RS
+.SP
+.SH "RETURN VALUE"
+Returns 1 for successful extraction, 3 for invalid index. Given byRef longs are set to creation time and termination time of process respectively.
+.UC 4
+.SH NAME
+get_plog_byPID
+.SH SYNOPSIS
+.nf
+.ft B
+int get_plog_byPID(int pid, long *c_time, long *t_time)
+.fi
+.SH DESCRIPTION
+.de SP
+.if t .sp 0.4
+.if n .sp
+..
+.B get_plog_byPID
+Returns process log entry creation & termination times by given process id. 
+.RS
+.SP
+.SH "RETURN VALUE"
+Returns 1 for successful extraction, 2 for invalid PID. Given byRef longs are set to creation time and termination time of process respectively.
+.UC 4
+.SH NAME
+get_plog_size
+.SH SYNOPSIS
+.nf
+.ft B
+int get_plog_size()
+.fi
+.SH DESCRIPTION
+.de SP
+.if t .sp 0.4
+.if n .sp
+..
+.B get_plog_size
+Returns maximum size of process logging table. 
+.RS
+.SP
+.SH "RETURN VALUE"
+Returns size of the process logging table to the caller.

@@ -4,8 +4,8 @@
 // Start LOGSYSPS logging
 void start_plog() {
 
-	message m;
-	m.m10_i1 = 0; // Mode
-	_syscall(PM_PROC_NR, LOGSYSPS, &m);
+	message m;								// Message
+	m.m10_i1 = 0; 							// Call Mode
+	_syscall(PM_PROC_NR, LOGSYSPS, &m);		// Perform syscall
 	
 }

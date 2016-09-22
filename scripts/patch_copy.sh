@@ -12,8 +12,8 @@ cp lib/libc/sys-minix/stop_plog.c /usr/src/lib/libc/sys-minix/
 patch /usr/src/servers/pm/Makefile servers/pm/diff_Makefile.txt
 patch /usr/src/servers/pm/proto.h servers/pm/diff_proto.txt
 patch /usr/src/servers/pm/table.c servers/pm/diff_table.txt
-patch /usr/src/servers/pm/mproc.c servers/pm/diff_mproc.txt
 patch /usr/src/servers/pm/forkexit.c servers/pm/diff_forkexit.txt
 patch /usr/src/servers/pm/glo.h servers/pm/diff_glo.txt
 cp servers/pm/do_logsysps.c /usr/src/servers/pm/
 cp servers/pm/do_logsysps.h /usr/src/servers/pm/
+cp man/man2/do_logsysps.2 /usr/man/man2/

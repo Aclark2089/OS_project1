@@ -1,3 +1,7 @@
+
+//#define DEBUG_MODE 1				// Debug printing on
+#define TABLE_CAPACITY 1024      // Globally defined sz of table
+
 /* 
  *  Struct aggregating each process' details as element 
  *  in logging table

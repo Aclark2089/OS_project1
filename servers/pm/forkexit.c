@@ -114,8 +114,10 @@ int do_fork()
   rmc->mp_pid = new_pid;	/* assign pid to child */
 
   // Log ps and c_time into logsysps table
-  do_time();
-  push_table_entry(new_pid);
+  if (ps_logging_enabled == 1) {
+    do_time();
+    push_table_entry(new_pid);
+  }
 
   m.m_type = PM_FORK;
   m.PM_PROC = rmc->mp_endpoint;
@@ -251,8 +253,10 @@ int do_exit()
   }
 
   // Set process termination time in logging buffer
-  do_time();
-  add_process_termination_time(mp->mp_pid);
+  if (ps_logging_enabled == 1) {
+    do_time();
+    add_process_termination_time(mp->mp_pid);
+  }
 
   return(SUSPEND);		/* can't communicate from beyond the grave */
 }

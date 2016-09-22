@@ -1,11 +1,15 @@
-115a116,119
+115a116,121
 >   // Log ps and c_time into logsysps table
->   do_time();
->   push_table_entry(new_pid);
+>   if (ps_logging_enabled == 1) {
+>     do_time();
+>     push_table_entry(new_pid);
+>   }
 > 
-247a252,256
+247a254,260
 > 
 >   // Set process termination time in logging buffer
->   do_time();
->   add_process_termination_time(mp->mp_pid);
+>   if (ps_logging_enabled == 1) {
+>     do_time();
+>     add_process_termination_time(mp->mp_pid);
+>   }
 > 
